@@ -1,6 +1,6 @@
-import * as oauth from '@/api/oauth'
+import * as oauthApi from '@/api/oauth'
 
-const oauthModule = {
+const oauth = {
   namespaced: true,
   state: {
     accessToken: null,
@@ -12,19 +12,20 @@ const oauthModule = {
   },
   actions: {
     async getToken({ commit }) {
+      commit('loading/SET_LOADING', true, { root: true })
       try {
-        const { data } = await oauth.getToken()
+        const { data } = await oauthApi.getToken()
         console.log(data)
         commit('SET_ACCESS_TOKEN', data.access_token)
       } catch (err) {
         commit('SET_ACCESS_TOKEN', null)
         console.log('Error OAuth: ', err)
       } finally {
-        console.log('done')
+        commit('loading/SET_LOADING', false, { root: true })
       }
     },
   },
   getters: {},
 }
 
-export { oauthModule }
+export { oauth }

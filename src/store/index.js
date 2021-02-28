@@ -1,12 +1,14 @@
 import { createStore, createLogger } from 'vuex'
-import { oauthModule } from '@/store/modules/oauth'
+import { oauth } from '@/store/modules/oauth'
+import { loading } from '@/store/modules/loading'
 
 export default createStore({
   state: {},
   mutations: {},
   actions: {},
   modules: {
-    oauth: oauthModule,
+    oauth,
+    loading,
   },
   plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],
 })

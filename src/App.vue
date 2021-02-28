@@ -1,16 +1,29 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <LoadLayout v-if="isLoading">
+    <BaseLoading/>
+  </LoadLayout>
+
+  <MainLayout v-else/>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
+import LoadLayout from '@/layouts/LoadLayout'
+import MainLayout from '@/layouts/MainLayout'
+import BaseLoading from '@/components/BaseLoading.vue'
 
 export default {
   name: 'App',
+  components: {
+    LoadLayout,
+    MainLayout,
+    BaseLoading
+  },
+  computed: {
+    ...mapState('loading', {
+      isLoading: 'isLoading'
+    }),
+  },
   async created() {
     /* await this.$store.dispatch('oauth/getToken', null, { root: true })
     console.log('done2') */
@@ -34,24 +47,17 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  padding: 60px 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  background-color: #15202b;
   text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
