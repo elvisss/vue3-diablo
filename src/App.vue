@@ -10,7 +10,7 @@
 import { mapActions, mapState } from 'vuex'
 import LoadLayout from '@/layouts/LoadLayout'
 import MainLayout from '@/layouts/MainLayout'
-import BaseLoading from '@/components/BaseLoading.vue'
+import BaseLoading from '@/components/BaseLoading'
 
 export default {
   name: 'App',
