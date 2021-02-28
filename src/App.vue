@@ -3,8 +3,35 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  name: 'App',
+  async created() {
+    /* await this.$store.dispatch('oauth/getToken', null, { root: true })
+    console.log('done2') */
+    /* this.openFullScreen2() */
+    await this.getToken()
+  },
+  methods: {
+    /* ...mapActions({
+      getToken: 'oauth/getToken'
+    }) */
+    ...mapActions('oauth', ['getToken']),
+    /* ...mapActions('oauth', { getToken2: 'getToken' }) */
+    openFullScreen2() {
+      const loading = this.$loading()
+      setTimeout(() => {
+        loading.close()
+      }, 2000)
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 #app {
