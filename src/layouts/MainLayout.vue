@@ -1,11 +1,9 @@
 <template>
-  <div class="container">
-    <HeaderBar />
+  <HeaderBar />
 
-    <router-view />
+  <router-view />
 
-    <FooterBar />
-  </div>
+  <FooterBar />
 </template>
 
 <script>

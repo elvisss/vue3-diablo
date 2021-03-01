@@ -10,4 +10,4 @@ const loading = {
   },
 }
 
-export { loading }
+export default loading

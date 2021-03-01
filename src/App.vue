@@ -1,9 +1,11 @@
 <template>
-  <LoadLayout v-if="isLoading">
-    <BaseLoading/>
-  </LoadLayout>
+  <div class="container">
+    <LoadLayout v-if="isLoading">
+      <BaseLoading />
+    </LoadLayout>
 
-  <MainLayout v-else/>
+    <MainLayout v-else />
+  </div>
 </template>
 
 <script>
@@ -17,7 +19,7 @@ export default {
   components: {
     LoadLayout,
     MainLayout,
-    BaseLoading
+    BaseLoading,
   },
   computed: {
     ...mapState('loading', ['isLoading']),

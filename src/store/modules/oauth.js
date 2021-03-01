@@ -28,4 +28,4 @@ const oauth = {
   getters: {},
 }
 
-export { oauth }
+export default oauth

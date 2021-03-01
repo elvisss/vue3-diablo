@@ -6,7 +6,7 @@ const routerOptions = [
   { path: '/region/:region/profile/:battleTag/hero/:heroId', name: 'Hero' },
   { path: '/about', name: 'About' },
   { path: '/error', name: 'Error' },
-  { path: '/:pathMatch(.*)*', name: 'Error' },
+  { path: '/:pathMatch(.*)*', redirect: { name: 'Home' } },
 ]
 
 const routes = routerOptions.map((r) => {

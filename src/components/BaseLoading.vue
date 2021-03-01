@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="w-100 py-5">
     <el-skeleton :rows="5" animated />
-    <h1 class="text-center my-5">Loading...</h1>
+    <div class="text-center h5 my-5">Loading...</div>
   </div>
 </template>
 
