@@ -32,9 +32,9 @@ export default {
           href: 'https://vue.js.org/',
         },
         {
-          classes: ['fab', 'bootstrap'],
+          classes: ['fab', 'uikit'],
           color: '#7952b3',
-          href: 'https://bootstrap-vue.js.org/',
+          href: 'https://element-plus.org/',
         },
         {
           classes: ['fab', 'battle-net'],
@@ -44,7 +44,7 @@ export default {
         {
           classes: ['fab', 'github'],
           color: '#e4e4e4',
-          href: 'https://github.com/baumannzone',
+          href: 'https://github.com/elvisss',
         },
         {
           classes: ['fab', 'font-awesome'],

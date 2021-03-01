@@ -1,12 +1,16 @@
 <template>
-  <ul class="list-inline text-start">
-    <li class="list-inline-item">
-      <router-link class="btn btn-link mx-2" :to="{ name: 'Home' }">Home</router-link>
-      <router-link class="btn btn-link mx-2" :to="{ name: 'About' }">About</router-link>
+  <ul class="d-flex list-unstyled justify-content-start small">
+    <li class="nav-item">
+      <router-link class="nav-link" :to="{ name: 'Home' }">Home</router-link>
+    </li>
+    <li class="nav-item">
+      <router-link class="nav-link" :to="{ name: 'About' }">About</router-link>
+    </li>
+    <li class="nav-item">
       <a
-        href="https://github.com/baumannzone/diablo3-vue-platzi"
+        href="https://github.com/elvisss/vue3-diablo"
         target="_blank"
-        class="btn btn-link mx-2"
+        class="nav-link"
         >Github</a
       >
     </li>

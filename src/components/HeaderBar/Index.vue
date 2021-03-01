@@ -2,10 +2,10 @@
   <el-menu
     class="el-menu-demo"
     mode="horizontal"
-    background-color="#545c64"
+    background-color="#343a40"
     text-color="#fff"
     active-text-color="#ffd04b"
-    router="true"
+    :router="true"
     @select="handleSelect"
   >
     <el-menu-item index="/">

@@ -1,7 +1,7 @@
 <template>
-  <div class="text-center py-5">
+  <div class="container">
     <el-skeleton :rows="5" animated />
-    <h1 class="my-5">Loading...</h1>
+    <h1 class="text-center my-5">Loading...</h1>
   </div>
 </template>
 
@@ -41,12 +41,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.spinner-wrapper {
-  .spinner {
-    width: 4rem;
-    height: 4rem;
-  }
-}
-</style>

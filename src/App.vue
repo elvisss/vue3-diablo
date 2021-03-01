@@ -20,9 +20,7 @@ export default {
     BaseLoading
   },
   computed: {
-    ...mapState('loading', {
-      isLoading: 'isLoading'
-    }),
+    ...mapState('loading', ['isLoading']),
   },
   async created() {
     /* await this.$store.dispatch('oauth/getToken', null, { root: true })
@@ -36,12 +34,6 @@ export default {
     }) */
     ...mapActions('oauth', ['getToken']),
     /* ...mapActions('oauth', { getToken2: 'getToken' }) */
-    openFullScreen2() {
-      const loading = this.$loading()
-      setTimeout(() => {
-        loading.close()
-      }, 2000)
-    },
   },
 }
 </script>
@@ -58,6 +50,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
   background-color: #15202b;
-  text-align: center;
 }
 </style>
