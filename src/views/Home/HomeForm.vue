@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       form: {
-        battleTag: '',
+        battleTag: 'SuperRambo#2613',
         region: 'eu',
       },
       rules: {
