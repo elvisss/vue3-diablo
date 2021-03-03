@@ -10,7 +10,7 @@
           label-position="top"
           @submit.prevent="onSubmit"
         >
-          <el-form-item label="BattleTag:" prop="battleTag">
+          <el-form-item v-focus label="BattleTag:" prop="battleTag">
             <el-input
               placeholder="Format: YourProfile#1234"
               v-model="form.battleTag"
@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       form: {
-        battleTag: 'SuperRambo#2613',
+        battleTag: '',
         region: 'eu',
       },
       rules: {

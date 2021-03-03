@@ -13,12 +13,18 @@ import { FontAwesomeIcon } from '@/plugins/fontAwesome'
 
 import { formatNumber } from '@/filters/numeral'
 
+import focus from '@/directives'
+import diablo from '@/directives/diablo'
+
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(store)
 app.use(router)
 app.use(ElementPlus)
+
+app.directive('focus', focus)
+app.directive('diablo', diablo)
 
 app.config.globalProperties.$filters = {
   formatNumber,
