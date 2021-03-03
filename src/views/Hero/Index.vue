@@ -15,6 +15,7 @@
     <!-- 12 columnas de 'xs' -> 'md', 4 columnas desde 'lg' hacia arriba -->
     <!-- En 'lg' orden 1 -->
     <div class="col-md-12 col-lg-4 order-lg-1">
+      <BaseLoading v-if="isLoadingHero" />
       <template v-if="hero">
         <HeroAttributes :attributes="detailStats" />
         <HeroSkills :skills="hero.skills" />

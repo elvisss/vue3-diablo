@@ -13,7 +13,11 @@
             <!-- Nombre del objeto -->
             <p class="text-muted">{{ item.name }}</p>
             <!-- Imagen correspondiente al objeto -->
-            <img :src="itemUrl" :alt="item.slotName + ' ' + item.name" />
+            <img
+              :src="itemUrl"
+              :alt="slotName + ' ' + item.name"
+              :title="attributes"
+            />
           </div>
         </div>
 
@@ -41,7 +45,7 @@
       <p v-else>
         <!-- Mostramos el nombre del slot y dejamos el contenido vacío -->
         <el-tag type="info" effect="dark" size="small">
-          {{ item.slotName }}
+          {{ slotName }}
         </el-tag>
       </p>
     </div>
@@ -82,6 +86,21 @@ export default {
       }
       // Si no tiene color (es que no hay objeto equipado)
       return 'item-none'
+    },
+    slotName() {
+      const slotName = this.item.slots.split(/(?=[A-Z])/).join(' ')
+      return slotName[0].toUpperCase() + slotName.slice(1)
+    },
+    attributes() {
+      let attributesText = 'Primary Attributes:\n'
+      this.item.attributes.primary.map((attribute) => {
+        attributesText += `${attribute}\n`
+      })
+      attributesText += '\nSecondary Attributes:\n'
+      this.item.attributes.secondary.map((attribute) => {
+        attributesText += `${attribute}\n`
+      })
+      return attributesText
     },
   },
 }

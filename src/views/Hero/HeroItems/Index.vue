@@ -79,43 +79,43 @@ import ItemDetail from './ItemDetail'
 // Objeto con las keys de los 'items' del personaje
 const defaultItems = {
   head: {
-    slotName: 'head',
+    slots: 'head',
   },
   shoulders: {
-    slotName: 'Shoulders',
+    slots: 'Shoulders',
   },
   torso: {
-    slotName: 'Torso',
+    slots: 'Torso',
   },
   neck: {
-    slotName: 'Neck',
+    slots: 'Neck',
   },
   hands: {
-    slotName: 'Hands',
+    slots: 'Hands',
   },
   waist: {
-    slotName: 'Waist',
+    slots: 'Waist',
   },
   bracers: {
-    slotName: 'Bracers',
+    slots: 'Bracers',
   },
   leftFinger: {
-    slotName: 'Left Finger',
+    slots: 'Left Finger',
   },
   legs: {
-    slotName: 'Legs',
+    slots: 'Legs',
   },
   rightFinger: {
-    slotName: 'Right Finger',
+    slots: 'Right Finger',
   },
   mainHand: {
-    slotName: 'Main Hand',
+    slots: 'Main Hand',
   },
   feet: {
-    slotName: 'Feet',
+    slots: 'Feet',
   },
   offHand: {
-    slotName: 'Off Hand',
+    slots: 'Off Hand',
   },
 }
 
