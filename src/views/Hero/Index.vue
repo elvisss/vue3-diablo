@@ -9,6 +9,7 @@
     <!-- En 'lg' orden 2 -->
     <div class="col-md-12 col-lg-8 order-lg-2">
       <BaseLoading v-if="isLoadingItems" />
+      <HeroItems v-if="items" :items="items" />
     </div>
 
     <!-- 12 columnas de 'xs' -> 'md', 4 columnas desde 'lg' hacia arriba -->
@@ -28,6 +29,7 @@ import setError from '@/mixins/setError'
 import HeroDetailHeader from './HeroDetailHeader'
 import HeroAttributes from './HeroAttributes/Index'
 import HeroSkills from './HeroSkills/Index'
+import HeroItems from './HeroItems/Index'
 import { getApiHero, getApiDetailedHeroItems } from '@/api/search'
 
 export default {
@@ -38,6 +40,7 @@ export default {
     HeroDetailHeader,
     HeroAttributes,
     HeroSkills,
+    HeroItems,
   },
   data() {
     return {

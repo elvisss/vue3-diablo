@@ -1,6 +1,6 @@
 <template>
   <div class="passive-skills">
-    <h4 class="my-5">Passive</h4>
+    <h4 class="my-5 ">Passive</h4>
     <div class="skills">
       <div class="row">
         <div class="col-6 col-lg-12" v-for="(skill, idx) in skills" :key="idx">

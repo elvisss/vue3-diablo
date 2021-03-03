@@ -1,6 +1,6 @@
 <template>
   <div class="skills-wrapper mt-5">
-    <h2 class="font-diabloo">
+    <h2 class="font-diablo">
       Skills
     </h2>
     <hr class="bg-white" />
