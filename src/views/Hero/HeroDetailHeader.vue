@@ -34,7 +34,7 @@
             <small class="text-muted">
               Season created:
             </small>
-            <b-badge>{{ detail.seasonCreated }}</b-badge>
+            <el-tag type="info" size="mini">{{ detail.seasonCreated }}</el-tag>
           </div>
         </div>
 
