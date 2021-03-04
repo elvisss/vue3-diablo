@@ -1,25 +1,27 @@
 <template>
-  <div class="hero-view">
-    <BaseLoading v-if="isLoadingHero" />
-    <HeroDetailHeader v-if="hero" :detail="detailHeader" />
-  </div>
-
-  <div class="row">
-    <!-- 12 columnas de 'xs' -> 'md', 8 columnas desde 'lg' hacia arriba  -->
-    <!-- En 'lg' orden 2 -->
-    <div class="col-md-12 col-lg-8 order-lg-2">
-      <BaseLoading v-if="isLoadingItems" />
-      <HeroItems v-if="items" :items="items" />
+  <div>
+    <div class="hero-view">
+      <BaseLoading v-if="isLoadingHero" />
+      <HeroDetailHeader v-if="hero" :detail="detailHeader" />
     </div>
 
-    <!-- 12 columnas de 'xs' -> 'md', 4 columnas desde 'lg' hacia arriba -->
-    <!-- En 'lg' orden 1 -->
-    <div class="col-md-12 col-lg-4 order-lg-1">
-      <BaseLoading v-if="isLoadingHero" />
-      <template v-if="hero">
-        <HeroAttributes :attributes="detailStats" />
-        <HeroSkills :skills="hero.skills" />
-      </template>
+    <div class="row">
+      <!-- 12 columnas de 'xs' -> 'md', 8 columnas desde 'lg' hacia arriba  -->
+      <!-- En 'lg' orden 2 -->
+      <div class="col-md-12 col-lg-8 order-lg-2">
+        <BaseLoading v-if="isLoadingItems" />
+        <HeroItems v-if="items" :items="items" />
+      </div>
+
+      <!-- 12 columnas de 'xs' -> 'md', 4 columnas desde 'lg' hacia arriba -->
+      <!-- En 'lg' orden 1 -->
+      <div class="col-md-12 col-lg-4 order-lg-1">
+        <BaseLoading v-if="isLoadingHero" />
+        <template v-if="hero">
+          <HeroAttributes :attributes="detailStats" />
+          <HeroSkills :skills="hero.skills" />
+        </template>
+      </div>
     </div>
   </div>
 </template>

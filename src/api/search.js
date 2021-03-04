@@ -1,7 +1,5 @@
 // Axios para hacer la llamada HTTP
-import { get } from 'axios'
-// Store, donde tenemos almacenado nuestro token
-import store from '@/store/index'
+import axiosInstance from './axios'
 // Útil de regiones, que nos devolverá el 'locale' por defecto correspondiente a cada región
 import { locales } from '@/utils/regions'
 
@@ -22,13 +20,12 @@ const getApiAccount = ({ region, account }) => {
   // - Token de acceso (recuperado desde Vuex)
   // - Locale
   const params = {
-    access_token: store.state.oauth.accessToken,
     locale,
   }
 
   // Retornamos el resultado de hacer la llamada a la API, es decir, una promesa
   // que controlaremos (éxito / error) desde el componente
-  return get(API_URL, { params })
+  return axiosInstance.get(API_URL, { params })
 }
 
 function getApiHero({ region, account, heroId }) {
@@ -37,11 +34,10 @@ function getApiHero({ region, account, heroId }) {
   const locale = locales[region]
 
   const params = {
-    access_token: store.state.oauth.accessToken,
     locale,
   }
 
-  return get(API_URL, { params })
+  return axiosInstance.get(API_URL, { params })
 }
 
 /**
@@ -58,11 +54,10 @@ function getApiDetailedHeroItems({ region, account, heroId }) {
   const locale = locales[region]
 
   const params = {
-    access_token: store.state.oauth.accessToken,
     locale,
   }
 
-  return get(API_URL, { params })
+  return axiosInstance.get(API_URL, { params })
 }
 
 export {

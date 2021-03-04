@@ -6,7 +6,6 @@
     text-color="#fff"
     active-text-color="#ffd04b"
     :router="true"
-    @select="handleSelect"
   >
     <el-menu-item index="/">
       <img src="@/assets/img/diablo-iii.svg" alt="D3" width="30" />
@@ -18,10 +17,5 @@
 <script>
 export default {
   name: 'HeaderBar',
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath)
-    },
-  },
 }
 </script>

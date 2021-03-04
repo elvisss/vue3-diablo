@@ -1,9 +1,15 @@
 <template>
-  <HeaderBar />
+  <div id="main-section">
+    <HeaderBar />
 
-  <router-view />
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
 
-  <FooterBar />
+    <FooterBar />
+  </div>
 </template>
 
 <script>
@@ -18,3 +24,19 @@ export default {
   name: 'MainLayout',
 }
 </script>
+
+<style lang="scss">
+#main-section {
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+.fade-enter-active {
+  transition: transform 1s, opacity 2s;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+</style>

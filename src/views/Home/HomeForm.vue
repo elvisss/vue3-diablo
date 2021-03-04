@@ -12,7 +12,7 @@
         >
           <el-form-item v-focus label="BattleTag:" prop="battleTag">
             <el-input
-              placeholder="Format: YourProfile#1234"
+              placeholder="Example: SuperRambo#2613"
               v-model="form.battleTag"
             />
           </el-form-item>
@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       form: {
-        battleTag: '',
+        battleTag: 'SuperRambo#2613',
         region: 'eu',
       },
       rules: {
@@ -83,14 +83,12 @@ export default {
     onSubmit() {
       this.$refs.homeForm.validate((valid) => {
         if (valid) {
-          console.log(this.form)
           const { region, battleTag } = this.form
           this.$router.push({
             name: 'Profile',
             params: { region, battleTag: battleTag.replace('#', '-') },
           })
         } else {
-          console.log('error submit!!')
           return false
         }
       })

@@ -13,9 +13,6 @@ export default {
     // Tipografía Diablo
     el.style.fontFamily = 'DiabloHeavy, sans-serif'
 
-    console.log('binding')
-    console.log(binding)
-
     // Argumento (`:`)
     const arg = binding.arg === 'bone' ? 'bone' : 'white'
     // Si el argumento es 'bone'

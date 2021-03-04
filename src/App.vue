@@ -1,41 +1,55 @@
 <template>
   <div class="container">
-    <LoadLayout v-if="isLoading">
-      <BaseLoading />
-    </LoadLayout>
-
-    <MainLayout v-else />
+    <MainLayout v-if="!isLoading" />
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
-import LoadLayout from '@/layouts/LoadLayout'
+import { mapActions, mapState, mapMutations } from 'vuex'
 import MainLayout from '@/layouts/MainLayout'
-import BaseLoading from '@/components/BaseLoading'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      loader: null
+    }
+  },
   components: {
-    LoadLayout,
     MainLayout,
-    BaseLoading,
   },
   computed: {
     ...mapState('loading', ['isLoading']),
+    ...mapState('oauth', ['accessToken']),
   },
   async created() {
-    /* await this.$store.dispatch('oauth/getToken', null, { root: true })
-    console.log('done2') */
-    /* this.openFullScreen2() */
-    await this.getToken()
+    this.initialiseStore()
+    if (!this.accessToken) {
+      await this.getToken()
+    }
+  },
+  watch: {
+    isLoading: function(value) {
+      if (value) {
+        this.openFullScreen()
+      } else {
+        this.loader.close()
+      }
+    },
   },
   methods: {
-    /* ...mapActions({
-      getToken: 'oauth/getToken'
-    }) */
     ...mapActions('oauth', ['getToken']),
-    /* ...mapActions('oauth', { getToken2: 'getToken' }) */
+    ...mapMutations('oauth', {
+      initialiseStore: 'INITIALISE_STORE',
+    }),
+    openFullScreen() {
+      this.loader = this.$loading({
+        lock: true,
+        text: 'Loading...',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 0, 0, 0.75)',
+      })
+    },
   },
 }
 </script>
@@ -46,11 +60,10 @@ body {
   padding: 0;
 }
 #app {
-  padding: 60px 0;
+  color: #ffffff;
+  background-color: #15202b;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffffff;
-  background-color: #15202b;
 }
 </style>
