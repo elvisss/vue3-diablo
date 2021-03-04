@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 
-import App from '@/App.vue'
+import App from './App.vue'
 import router from './router'
 import store from './store'
 
@@ -8,13 +8,13 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/main.scss'
 
-import { ElementPlus } from '@/plugins/element'
-import { FontAwesomeIcon } from '@/plugins/fontAwesome'
+import { ElementPlus } from './plugins/element'
+import { FontAwesomeIcon } from './plugins/fontAwesome'
 
-import { formatNumber } from '@/filters/numeral'
+import { formatNumber } from './filters/numeral'
 
-import focus from '@/directives'
-import diablo from '@/directives/diablo'
+import focus from './directives'
+import diablo from './directives/diablo'
 
 const app = createApp(App)
 
