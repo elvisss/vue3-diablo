@@ -9,11 +9,9 @@
 > - Region: `EU`
 
 ---
-<br />
+
 ![D3PF](assets/main.png)
-<br />
-<br />
----
+
 ---
 ## Project setup
 ```markdown
