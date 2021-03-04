@@ -1,9 +1,9 @@
 # Diablo 3 Profile Finder
 
-[D3PF](https://diablo3dp-vue3.netlify.com/): Vue.js app created from scratch through [Vue CLI](https://cli.vuejs.org/) that consume official Diablo III APIs, a Blizzard's game.
+[D3PF](https://diablo3dp-vue3.netlify.app/): Vue.js app created from scratch through [Vue CLI](https://cli.vuejs.org/) that consume official Diablo III APIs, a Blizzard's game.
 
 ## App Live Demo
-👉 https://diablo3dp-vue3.netlify.com/
+👉 https://diablo3dp-vue3.netlify.app/
 
 > - User: `SuperRambo#2613`
 > - Region: `EU`
