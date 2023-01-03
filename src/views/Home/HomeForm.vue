@@ -12,7 +12,7 @@
         >
           <el-form-item v-focus label="BattleTag:" prop="battleTag">
             <el-input
-              placeholder="Example: SuperRambo#2613"
+              placeholder="Example: Prdik#2397"
               v-model="form.battleTag"
             />
           </el-form-item>
@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       form: {
-        battleTag: 'SuperRambo#2613',
+        battleTag: 'Prdik#2397',
         region: 'eu',
       },
       rules: {

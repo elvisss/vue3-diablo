@@ -1,4 +1,4 @@
-import { post } from 'axios'
+import axios from 'axios'
 
 const clientId = process.env.VUE_APP_CLIENT_ID
 const clientSecret = process.env.VUE_APP_CLIENT_SECRET
@@ -26,7 +26,7 @@ const getToken = () => {
   // Le pasamos la URL como primer parámetro
   // Como segundo, el body, que es un FormData
   // Y la configuración como tercer argumento
-  return post(API_URL, body, config)
+  return axios.post(API_URL, body, config)
 }
 
 // Exportamos la función para poder usarla más tarde
