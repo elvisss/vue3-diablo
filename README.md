@@ -3,9 +3,12 @@
 [D3PF](https://diablo3dp-vue3.netlify.app/): Vue.js app created from scratch through [Vue CLI](https://cli.vuejs.org/) that consume official Diablo III APIs, a Blizzard's game.
 
 ## App Live Demo
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c772bf4d-dd5d-44ae-9a4e-b33ebdfdbb0c/deploy-status)](https://app.netlify.com/sites/diablo3dp-vue3/deploys)
+
 👉 https://diablo3dp-vue3.netlify.app/
 
-> - User: `SuperRambo#2613`
+> - User: `Prdik#2397`
 > - Region: `EU`
 
 ---
