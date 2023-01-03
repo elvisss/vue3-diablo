@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/vue3-diablo/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
 }
