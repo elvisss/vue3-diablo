@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/main.scss'
 
 import { ElementPlus } from './plugins/element'
-import { FontAwesomeIcon } from './plugins/fontAwesome'
+import { FontAwesomeIcon } from './plugins/fontawesome'
 
 import { formatNumber } from './filters/numeral'
 
