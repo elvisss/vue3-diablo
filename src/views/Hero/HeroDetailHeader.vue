@@ -34,7 +34,7 @@
             <small class="text-muted">
               Season created:
             </small>
-            <el-tag type="info" effect="dark" size="mini">{{ detail.seasonCreated }}</el-tag>
+            <el-tag type="info" effect="dark" size="small">{{ detail.seasonCreated }}</el-tag>
           </div>
         </div>
 

@@ -5,7 +5,7 @@
     </h2>
     <hr class="bg-white" />
 
-    <el-radio-group size="mini" el-tab-pane class="mb-4" v-model="currentTab">
+    <el-radio-group size="small" el-tab-pane class="mb-4" v-model="currentTab">
       <el-radio-button label="Active">Active</el-radio-button>
       <el-radio-button label="Passive">Passive</el-radio-button>
     </el-radio-group>
